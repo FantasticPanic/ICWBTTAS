@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Definition for the word "Go"
 [CreateAssetMenu(menuName ="TextAdventure/InputActions/Go")]
 public class Go : InputAction
 {

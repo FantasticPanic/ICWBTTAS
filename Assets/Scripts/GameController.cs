@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //get the RoomNavigation componenet
         roomNavigation = GetComponent<RoomNavigation>();
     }
 
@@ -33,10 +34,11 @@ public class GameController : MonoBehaviour
 
     public void DisplayRoomText()
     {
-
+        //clear the information of the previous room
         ClearCollectionForNewRoom();
+        //get the information of the current room
         UnpackRoom();
-
+        //
         string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInRoom.ToArray());
 
         string combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions;
@@ -46,11 +48,13 @@ public class GameController : MonoBehaviour
 
     private void UnpackRoom()
     {
+        //get the exits for each room
         roomNavigation.UnpackExitsInRoom();
     }
 
     void ClearCollectionForNewRoom()
     {
+        //clear the previous descriptions of the exits in the room
         interactionDescriptionsInRoom.Clear();
         roomNavigation.ClearExits();
     }

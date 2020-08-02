@@ -11,21 +11,26 @@ public class RoomNavigation : MonoBehaviour
 
     public object AttemptToChangeRoom { get; internal set; }
 
+    //get the controller componenet
     private void Awake()
     {
         controller = GetComponent<GameController>();
 
     }
 
+    // get the exit array in the current room 
     public void UnpackExitsInRoom()
     {
+        //for each exit in the room asset
         for (int i = 0; i < currentRoom.exits.Length; i++)
         {
+            //get the direction of the exit and where the user will end up
             exitDictionary.Add(currentRoom.exits[i].keyString, currentRoom.exits[i].valueRoom);
+            //for the controller, get a description of the exit
             controller.interactionDescriptionsInRoom.Add(currentRoom.exits[i].exitDescription);
         }
     }
-
+    //if the user decides to change rooms
     public void AttemptToChangeRooms(string directionNoun)
     {
         if (exitDictionary.ContainsKey(directionNoun))
@@ -41,6 +46,7 @@ public class RoomNavigation : MonoBehaviour
 
     public void ClearExits()
     {
+        //clear the dictionary
         exitDictionary.Clear();
 
     }
