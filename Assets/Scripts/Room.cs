@@ -14,5 +14,6 @@ public class Room : ScriptableObject
 
     //reference to Exit.cs
     public Exit[] exits;
+    public InteractableObject[] interactableObjectsInRoom;
 
 }

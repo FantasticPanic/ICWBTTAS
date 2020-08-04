@@ -258,7 +258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -384}
+  m_AnchoredPosition: {x: 9, y: -347}
   m_SizeDelta: {x: 900, y: 416.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237766549
@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 862142932}
   - component: {fileID: 862142931}
   - component: {fileID: 862142934}
+  - component: {fileID: 862142935}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -491,8 +492,11 @@ MonoBehaviour:
   inputActions:
   - {fileID: 11400000, guid: b4622b7f4e61b1a4fad2c017490e762b, type: 2}
   - {fileID: 11400000, guid: 4e3ed8978432c22428a3131a145ffe49, type: 2}
+  - {fileID: 11400000, guid: ac57314edc910914299a072829532429, type: 2}
+  - {fileID: 11400000, guid: 268e0319cea49484395a903dbf5fc5b3, type: 2}
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
+  interactableItems: {fileID: 0}
 --- !u!4 &862142933
 Transform:
   m_ObjectHideFlags: 0
@@ -520,6 +524,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 237766549}
+--- !u!114 &862142935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862142930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff40dbd84cb8e741864363beb9ed9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nounsInRoom: []
 --- !u!1 &898902514
 GameObject:
   m_ObjectHideFlags: 0

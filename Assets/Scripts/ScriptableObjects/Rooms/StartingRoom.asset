@@ -18,3 +18,5 @@ MonoBehaviour:
   - keyString: north
     exitDescription: There is a room to the north
     valueRoom: {fileID: 11400000, guid: e4613356d9b111a409f00f4c60fc6f47, type: 2}
+  interactableObjectsInRoom:
+  - {fileID: 11400000, guid: 3029e2b6f9ed9d1438d209ba6c78fbfc, type: 2}

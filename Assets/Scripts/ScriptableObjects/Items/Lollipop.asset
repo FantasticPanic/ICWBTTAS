@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be37c6174b36f5a479930ea02f376859, type: 3}
+  m_Name: Lollipop
+  m_EditorClassIdentifier: 
+  noun: lollipop
+  description: There is a lolipop in the corner
+  interactions:
+  - inputAction: {fileID: 11400000, guid: ac57314edc910914299a072829532429, type: 2}
+    textResponse: It kinda looks like a buttplug
+  - inputAction: {fileID: 11400000, guid: 268e0319cea49484395a903dbf5fc5b3, type: 2}
+    textResponse: You take the lollipop

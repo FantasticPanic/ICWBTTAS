@@ -33,8 +33,10 @@ public class RoomNavigation : MonoBehaviour
     //if the user decides to change rooms
     public void AttemptToChangeRooms(string directionNoun)
     {
+        //get the direction noun 
         if (exitDictionary.ContainsKey(directionNoun))
         {
+            //get the key of the room to the given direction
             currentRoom = exitDictionary[directionNoun];
             controller.LogStringWithReturn("You head off to the " + directionNoun);
             controller.DisplayRoomText();

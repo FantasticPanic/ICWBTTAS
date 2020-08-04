@@ -17,6 +17,7 @@ public class TextInput : MonoBehaviour
     }
     void AcceptStringInput(string userInput)
     {
+        //put the user input in lowercase
         userInput = userInput.ToLower();
         gameController.LogStringWithReturn(userInput);
 
