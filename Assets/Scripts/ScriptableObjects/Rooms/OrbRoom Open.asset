@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4cf48b73c0e5f4bab4453d72747f22, type: 3}
+  m_Name: OrbRoom Open
+  m_EditorClassIdentifier: 
+  description: There is a vibration in the room. It smells like ass now.
+  roomName: Orb Room
+  exits:
+  - keyString: west
+    exitDescription: A big ole dude steps into the room
+    valueRoom: {fileID: 11400000, guid: 4a63b1403178b614482c23b640ecb081, type: 2}
+  interactableObjectsInRoom: []

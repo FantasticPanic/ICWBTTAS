@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcafaa5900f1d614e98323a8fae969fd, type: 3}
+  m_Name: Change OrbRoom
+  m_EditorClassIdentifier: 
+  requiredString: Orb Room
+  roomToChangeTo: {fileID: 11400000, guid: 906a91e2ea632d64c9efa2c2a84cdde7, type: 2}

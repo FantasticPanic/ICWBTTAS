@@ -494,6 +494,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e3ed8978432c22428a3131a145ffe49, type: 2}
   - {fileID: 11400000, guid: ac57314edc910914299a072829532429, type: 2}
   - {fileID: 11400000, guid: 268e0319cea49484395a903dbf5fc5b3, type: 2}
+  - {fileID: 11400000, guid: df6ee8a156164844289fe114985822aa, type: 2}
+  - {fileID: 11400000, guid: 7209998b34990d44f84070d406890bd2, type: 2}
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
   interactableItems: {fileID: 0}
@@ -536,6 +538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff40dbd84cb8e741864363beb9ed9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usuableObjectList:
+  - {fileID: 11400000, guid: 3029e2b6f9ed9d1438d209ba6c78fbfc, type: 2}
+  controller: {fileID: 0}
   nounsInRoom: []
 --- !u!1 &898902514
 GameObject:
