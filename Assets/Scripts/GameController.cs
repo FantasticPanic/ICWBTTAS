@@ -87,6 +87,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    //if the input contains a noun (item) in the database
     public string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb, string noun)
     {
         if (verbDictionary.ContainsKey(noun))

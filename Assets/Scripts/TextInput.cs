@@ -13,7 +13,9 @@ public class TextInput : MonoBehaviour
     private void Awake()
     {
         gameController = GetComponent<GameController>();
+        //when user presses enter
         inputField.onEndEdit.AddListener(AcceptStringInput);
+        
     }
     void AcceptStringInput(string userInput)
     {
@@ -40,6 +42,8 @@ public class TextInput : MonoBehaviour
     void InputComplete()
     {
         gameController.DisplayLoggedText();
+        //player will be back on input field after hitting return
         inputField.ActivateInputField();
+        inputField.text = null;
     }
 }
