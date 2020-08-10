@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [HideInInspector] public RoomNavigation roomNavigation;
     [HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string>();
     [HideInInspector] public InteractableItems interactableItems;
+    [HideInInspector] public bool isAbleToDo = false;
 
     //will contain the string for inputs
     List<string> actionLog = new List<string>();
@@ -77,11 +78,13 @@ public class GameController : MonoBehaviour
                 {
                     //pass in the name of the noun and give back the response
                     interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+                   
                 }
                 if (interaction.inputAction.keyword == "take")
                 {
                     //pass in the name of the noun and give back the response
                     interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+                  
                 }
             }
         }
@@ -90,11 +93,14 @@ public class GameController : MonoBehaviour
     //if the input contains a noun (item) in the database
     public string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb, string noun)
     {
+        
         if (verbDictionary.ContainsKey(noun))
         {
+            
             return verbDictionary[noun];
+            
         }
-
+ 
         return "You can't " + verb + " " + noun;
     }
 

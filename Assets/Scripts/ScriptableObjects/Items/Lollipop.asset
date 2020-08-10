@@ -19,7 +19,7 @@ MonoBehaviour:
     textResponse: It kinda looks like a buttplug
     actionResponses: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: 268e0319cea49484395a903dbf5fc5b3, type: 2}
-    textResponse: You take the lollipop
+    textResponse: You take the lollipop. Cool!
     actionResponses: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: 7209998b34990d44f84070d406890bd2, type: 2}
     textResponse: You use the lollipop
