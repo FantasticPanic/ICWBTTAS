@@ -8,7 +8,8 @@ public class TextInput : MonoBehaviour
 
 
     public InputField inputField;
-    private string isAllowed = "you don't know how to ";
+    private bool isAllowed = false;
+    
     GameController gameController;
 
     private void Awake()
@@ -20,35 +21,37 @@ public class TextInput : MonoBehaviour
     }
     void AcceptStringInput(string userInput)
     {
-       
+
 
         //put the user input in lowercase
-
+        userInput = userInput.ToLower();
 
         //mirror input and then process it
         char[] delimiterCharacters = { ' ' };
         string[] separatedInputWords = userInput.Split(delimiterCharacters);
        
+        //for each of the inputActions in the game controller
         for (int i = 0; i < gameController.inputActions.Length; i++)
         {
             InputAction inputAction = gameController.inputActions[i];
+            //if the inputAction matches the first verb 
             if (inputAction.keyword == separatedInputWords[0])
             {
-                isAllowed = "";
-                userInput = userInput.ToLower();
-                gameController.LogStringWithReturn(isAllowed + userInput);
+                isAllowed = true;
+                gameController.LogStringWithReturn(userInput);
                 inputAction.RespondToInput(gameController, separatedInputWords);
-                Debug.Log("input action found");     
+                Debug.Log("input action found");
             }
-           
-
+                
         }
 
-        userInput = userInput.ToLower();
-       gameController.LogStringWithReturn(isAllowed + userInput);
+        if (isAllowed == false)
+        {
+            gameController.LogStringWithReturn("You don't know how to " + userInput);
+        }
+        
         InputComplete();
       
-
     }
 
     void InputComplete()
@@ -57,5 +60,6 @@ public class TextInput : MonoBehaviour
         //player will be back on input field after hitting return
         inputField.ActivateInputField();
         inputField.text = null;
+        isAllowed = false;
     }
 }

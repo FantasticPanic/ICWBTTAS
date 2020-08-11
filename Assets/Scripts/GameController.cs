@@ -115,6 +115,12 @@ public class GameController : MonoBehaviour
     {
         actionLog.Add(stringToAdd + "\n");
     }
+
+    public string UnknownInput()
+    {
+
+        return "you don't know how";
+    }
     // Update is called once per frame
     void Update()
     {
