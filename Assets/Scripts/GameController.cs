@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 {
     public Text displayText;
     public InputAction[] inputActions;
+    public AudioClip[] inputSounds;
+    public AudioSource audioSource;
 
     [HideInInspector] public RoomNavigation roomNavigation;
     [HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string>();
@@ -22,6 +24,8 @@ public class GameController : MonoBehaviour
         interactableItems = GetComponent<InteractableItems>();
         //get the RoomNavigation componenet
         roomNavigation = GetComponent<RoomNavigation>();
+        audioSource = GetComponent<AudioSource>();
+        
     }
 
     void Start()

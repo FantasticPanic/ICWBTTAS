@@ -38,6 +38,8 @@ public class TextInput : MonoBehaviour
             if (inputAction.keyword == separatedInputWords[0])
             {
                 isAllowed = true;
+                gameController.audioSource.clip = gameController.inputSounds[1];
+                gameController.audioSource.Play();
                 gameController.LogStringWithReturn(userInput);
                 inputAction.RespondToInput(gameController, separatedInputWords);
                 Debug.Log("input action found");
@@ -47,6 +49,8 @@ public class TextInput : MonoBehaviour
 
         if (isAllowed == false)
         {
+            gameController.audioSource.clip = gameController.inputSounds[0];
+            gameController.audioSource.Play();
             gameController.LogStringWithReturn("You don't know how to " + userInput);
         }
         

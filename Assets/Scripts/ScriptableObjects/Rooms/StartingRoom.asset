@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4cf48b73c0e5f4bab4453d72747f22, type: 3}
   m_Name: StartingRoom
   m_EditorClassIdentifier: 
-  description: This is the room where you start. Sup playa.
+  description: 'This is the room where you start. '
   roomName: StartingRoom
   exits:
   - keyString: north
